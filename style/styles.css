@@ -1,0 +1,646 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* for Login and Register Pages */
+.register-login-body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+        "header header header"
+        "nav1 main nav12"
+        "footer footer footer";
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+/* sides with logo in registration */
+#left {
+    grid-area: nav1;
+    background-color: #ffffff;
+    background-image: url("../images/logo_opacity_low.png");
+    background-size: 40px;
+    background-repeat: repeat;
+    position: relative;
+    border-right: 5px solid #ffa32b;
+}
+
+#right {
+    grid-area: nav12;
+    background-color: #ffffff;
+    background-image: url("../images/logo_opacity_low.png");
+    background-size: 40px;
+    background-repeat: repeat;
+    position: relative;
+    border-left: 5px solid #ffa32b;
+}
+
+/* footer box */
+#footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+/* for all pages when logged in */
+.logged_in_body {
+    display: grid;
+    grid-template-rows: auto 2fr auto;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+        "header header"
+        "nav main"
+        "footer footer";
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.logged_in_body aside {
+    grid-area: nav;
+    width: 150px;
+    padding-top: 5px;
+    background-color: #ffffff;
+    background-image: url("../images/logo_opacity_low.png");
+    background-size: 40px;
+    background-repeat: repeat;
+    border-right: 5px solid #ffa32b;
+
+}
+
+.logged_in_body main {
+    grid-area: main;
+    margin: 50px;
+    background-color: #ffffff;
+}
+
+
+main {
+    grid-area: main;
+    margin: 50px;
+    background-color: #ffffff;
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #a7dfe9;
+    border-bottom: 5px solid #ffa32b;
+    padding: 10px;
+    border-width: 0 0 2px 0;
+}
+
+footer {
+    grid-area: footer;
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    justify-content: center;
+    background-color: #a7dfe9;
+    text-align: center;
+    border-top: 2px solid #ffa32b;
+}
+
+
+/* element styles */
+textarea {
+    resize: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-width: 1px;
+    padding: 5px;
+    margin: 5px;
+    width: 200px;
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+input,
+select {
+    padding: 5px;
+    margin: 5px;
+    width: 200px;
+    height: 25px;
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+select {
+    padding: 10px;
+    margin: 7px;
+    height: 40px;
+}
+
+label {
+    padding: 5px;
+    margin: 5px;
+    width: 120px;
+    height: 25px;
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+legend {
+
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-left: 40px;
+    background-color: #ffa32b6a;
+    border: solid;
+    border-width: 2px;
+    padding: 5px;
+}
+
+
+table {
+    width: 100%;
+
+    font-size: 20px;
+    border-collapse: collapse;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+table th,
+td {
+    padding: 5px;
+    border: 1px solid #ddd;
+
+}
+
+table th {
+    font-family: "Khand";
+    background-color: #ffa32b6a;
+}
+
+
+/* document links */
+a[href$=".pdf"],
+a[href$=".docx"],
+a[href$=".png"],
+a[href$=".jpg"] {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 30px 30px;
+    margin: 10px;
+    color: #1f9123;
+    line-height: 30px;
+}
+
+a[href$=".pdf"] {
+    background-image: url(../images/PDF_icon.png);
+    padding-left: 35px;
+}
+
+a[href$=".docx"] {
+    background-image: url(../images/docx_icon.png);
+    padding-left: 35px;
+}
+
+a[href$=".png"] {
+    background-image: url(../images/png_icon.png);
+    padding-left: 35px;
+}
+
+a[href$=".jpg"] {
+    background-image: url(../images/jpg_icon.png);
+    padding-left: 35px;
+}
+
+
+/* element actions styles */
+input:disabled,
+textarea:disabled {
+    border: dotted;
+    border-width: 2px;
+    border-color: #1f9123;
+}
+
+select:hover,
+input:hover,
+textarea:hover {
+    border-width: 2px;
+}
+
+select:focus,
+input:focus,
+textarea:focus {
+    background-color: #a7dfe958;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #d3d3d36c;
+}
+
+tbody tr:hover {
+    background-color: #fcba6546;
+}
+
+a[href$=".pdf"]:hover,
+a[href$=".docx"]:hover,
+a[href$=".png"]:hover,
+a[href$=".jpg"]:hover {
+    color: #128711;
+    background-color: #f0f0f0;
+    box-shadow: 0 0 10px #00000033;
+    border-radius: 5px;
+}
+
+a[href$=".pdf"]:active,
+a[href$=".docx"]:active,
+a[href$=".png"]:active,
+a[href$=".jpg"]:active {
+    background-color: #ffa32b6a;
+    box-shadow: 0 0 5px #0000004d;
+}
+
+/* to display accept and reject choices */
+label.positive {
+    background-color: #d4eddaa3;
+    border-color: #28a745;
+}
+
+label.negative {
+    background-color: #f8d7da;
+    border-color: #dc3545;
+}
+
+input[type="radio"]:checked+label {
+    background-color: #8bda9d;
+    border-color: #218838;
+}
+
+input[type="radio"]:checked+label.negative {
+    background-color: #f0a9b0;
+    border-color: #c82333;
+}
+
+
+
+
+/* ////////////////// classes ////////////////////*/
+
+/* system button */
+.clickable-button {
+    background-color: #a7dfe9;
+    padding: 10px;
+    border: 2px solid;
+    border-radius: 5px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    transform: scale(.95);
+    box-shadow: 6px 5px 20px 1px rgba(0, 0, 0, 0.1);
+
+}
+
+.clickable-button:hover {
+    background-color: #ffa32b6a;
+    transform: scale(.98);
+    border-color: #1f9123;
+    box-shadow: 6px 5px 20px 1px rgba(0, 0, 0, .5);
+}
+
+.clickable-button:active {
+    background-color: #ffa32b;
+    border: 2px dashed;
+}
+
+/* to show button positive choice */
+.change-color {
+    background-color: #a8ef93aa;
+}
+
+
+/* registration container with form */
+.reg-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    width: 700px;
+    height: auto;
+    border: solid;
+    border-width: 3px;
+    padding: 20px;
+
+}
+
+.reg-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+/* the structure of any form */
+.form_input_container {
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    height: auto;
+    border: solid;
+    border-width: 5px;
+    border-color: #054a7e;
+    padding: 50px;
+    padding-right: 100px;
+    margin: 50px;
+    align-items: start;
+}
+
+.form_input_container form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+    margin: 20px;
+}
+
+
+/* address div inputs */
+.address_div:last-child div {
+    display: grid;
+    align-items: start;
+    grid-template-columns: 130px .5fr auto;
+    margin-top: 0px;
+    margin-left: -5px;
+}
+
+/* registration div rows */
+.input-row {
+    display: grid;
+    align-items: start;
+    grid-template-columns: 130px 1fr auto;
+    margin: 10px;
+}
+
+
+/* input error messages */
+.error-message {
+    font-family: monospace;
+    font-size: 13px;
+    border: dashed;
+    padding: 3px;
+    margin-left: 10px;
+    max-width: 500px;
+    border-width: 1px;
+    border-radius: 5px;
+    background-color: rgb(255, 216, 216);
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.wrong-input {
+    background-color: darkgrey;
+}
+
+/* row for inputting files */
+.file-row {
+    display: grid;
+    align-items: start;
+    grid-template-columns: 200px 230px auto;
+    margin: 10px;
+}
+
+#skill-input:focus {
+    height: 150px;
+}
+
+#fancy_text {
+    font-family: "Rubik Vinyl";
+    font-size: 30px;
+    color: #ffa32b;
+}
+
+#p_description {
+    width: 500px;
+    resize: both;
+    font-size: 16px;
+}
+
+/* /////////////// Links ////////////// */
+/* site links in top nav*/
+.styled-link {
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 2px;
+    color: black;
+    font-weight: bold;
+}
+
+.styled-link:hover {
+    color: #ffffff;
+    background-color: #054a7e;
+    padding: 2px;
+    border-radius: 5px;
+    text-decoration: underline;
+}
+
+.styled-link:focus {
+    outline: 3px solid #ffa32b;
+    outline-offset: 2px;
+}
+
+/* link for side navigation */
+.nav-link {
+    display: flex;
+
+    padding: 15px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 530;
+    text-decoration: none;
+    font-family: Khand;
+    color: #000000;
+    background-color: white;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+}
+
+.nav-link:hover {
+    background-color: #ffa32b6a;
+    border-radius: 10px;
+}
+
+.nav-link:active {
+    background-color: #ffa32b;
+    color: #fff;
+    font-weight: bold;
+}
+
+.nav-link_selected {
+    background-color: #a7dfe9;
+    border-color: #ffa32b;
+    border-width: 2px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+
+/* images in tables that represent actions */
+.clickable_img {
+    cursor: pointer;
+    /* Changes cursor to a pointer */
+    border: none;
+    margin: 10px;
+}
+
+.clickable_img:hover {
+    border: dotted;
+    border-width: 3px;
+    margin: 8px;
+    border-color: #ffa32b;
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+
+/* documents display */
+.documents {
+    margin-top: 20px;
+}
+
+.documents h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+/* user profile in top nav */
+.user-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+
+.user-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffa32b;
+}
+
+.user-photo:hover{
+    border: 5px dashed #ffa32b;
+}
+
+.top-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+/* project required styles in dashboard */
+.low-priority {
+    background-color: green;
+    color: white;
+}
+
+.medium-priority {
+    background-color: yellow;
+    color: black;
+}
+
+.high-priority {
+    background-color: red;
+    color: white;
+}
+
+.pending {
+    font-style: italic;
+    background-color: gray;
+    color: white;
+}
+
+.in-progress {
+    font-weight: bold;
+    background-color: lightblue;
+    color: black;
+}
+
+.completed {
+    text-decoration: line-through;
+    border: 2px solid green;
+}
+
+/* task details after dash */
+.details_container{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+    justify-content: start;
+}
+
+.task-details {
+    width: 300px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px;
+    padding: 20px;
+}
+.task-details h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.task-details dt {
+    font-weight: bold;
+}
+.task-details dd {
+    margin-bottom: 10px;
+}
+
+
+/* any link in the tables */
+.table_link{
+
+    color: #ffa32b;
+    text-decoration: none;
+    font-weight: bold;
+}
+.table_link:hover{
+
+    color: #054a7e;
+    text-decoration: underline;
+}
+
+.member-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    border: 3px solid #ffa32b;
+    box-shadow: 0 2px 4px #00000047;
+}
+
+.member-photo:hover {
+    box-shadow: 0 4px 8px #00000083;
+    border-color: #054a7e;/
+}
+
+/* forgot where i used this but left it just incase <:) */
+#success_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 900px;
+    height: 400px;
+    border: solid;
+    border-width: 5px;
+    border-color: #054a7e;
+    padding: 50px;
+    padding-right: 100px;
+    margin: 50px;
+}
