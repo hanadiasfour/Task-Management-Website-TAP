@@ -28,7 +28,12 @@ A simple web-based system to manage tasks and team members. It allows managers t
 ## Registeration Pages:
 ![Image](https://github.com/user-attachments/assets/847ca4a6-d777-43b0-a753-1d2349879613)
 ![Image](https://github.com/user-attachments/assets/bcc1c761-946e-41bf-8a08-a756cb84122f)
+<br>
+![Image](https://github.com/user-attachments/assets/f034762b-ef70-4dab-a0ed-227892f7876c)
 
+## Role-Based Task Dashboard:
+![Image](https://github.com/user-attachments/assets/6ef512f7-c8f4-458f-b528-7e11df6d122c)
+![Image](https://github.com/user-attachments/assets/a611882b-3469-4535-a15b-8119a2bfbaa2)
 
 
 
